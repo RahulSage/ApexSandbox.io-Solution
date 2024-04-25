@@ -6,6 +6,7 @@ public Integer nextPrime(Integer num) {
         }
         ++num;
     }
+    return num;
 }
 
 public Boolean isPrime(Integer num) {
