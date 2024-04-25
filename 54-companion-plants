@@ -1,0 +1,11 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    //code here
+    Map<String,String> companionsPair = new Map<String,String>();
+    companionsPair.put('lettuce','cucumbers');
+    companionsPair.put('lettuce','onions');
+    companionsPair.put('onions','carrots');
+    companionsPair.put('onions','tomatoes');
+
+    return (companionsPair.get(plant1) == plant2) || (companionsPair.get(plant2) == plant1);
+
+}
