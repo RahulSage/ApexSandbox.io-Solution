@@ -1,10 +1,10 @@
 public Boolean companionPlants(String plant1, String plant2) {
     //code here
     Map<String,List<String>> companionsPair = new Map<String,List<String>>();
-    companionsPair.put('lettuce',new List<String>(){'cucumbers','onions'});
-    companionsPair.put('onions',new List<String>(){'carrots','tomatoes'});
+    companionsPair.put('lettuce',new List<String>{'cucumbers','onions'});
+    companionsPair.put('onions',new List<String>{'carrots','tomatoes'});
     
 
-    return (companionsPair.get(plant1).contains(plant2)) || (companionsPair.get(plant2).contains(plant1));
+    return (companionsPair.containsKey(plant1) && companionsPair.get(plant1).contains(plant2)) || (companionsPair.containsKey(plant2) && companionsPair.get(plant2).contains(plant1));
 
 }
