@@ -1,6 +1,6 @@
 public Boolean isPrime(Integer num) {
     //code here
-    if(num == 2) return true;
+    //if(num == 2) return true;
     for(Integer i = 2;i < num ; i++){
         if(Math.mod(num,i) == 0) return false;
     }
