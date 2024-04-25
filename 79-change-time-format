@@ -8,6 +8,8 @@ public String changeTimeFormat(String strTime) {
         return '12:'+ minutes + ' AM';
     }else if(hour <= 11) {
         return strTime + ' AM';
+    } else if(hour == 12) {
+        return strTime + ' PM';
     } else {
         hourStr = String.valueOf(hour - 12);
         return hourStr + ':' + minutes + ' PM';
