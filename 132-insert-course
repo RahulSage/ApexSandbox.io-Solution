@@ -1,10 +1,11 @@
 public Id insertCourse(String name, String details, Integer credits) {
     // code here
-
+    List<Integer> creditList = new List<Integer>{1,2,3,4}; 
+    String creditStr = creditList.contains(credits) ? String.valueOf(credits) : null;
     apxio__Course__c course = new apxio__Course__c(
         Name = name,
         apxio__Course_Details__c = details,
-        apxio__Credits__c = credits
+        apxio__Credits__c = creditStr
     );
 
     insert course;
