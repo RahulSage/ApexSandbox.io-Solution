@@ -1,0 +1,6 @@
+public List<Account> getAccountsFromJSONString(String inputJSON){
+    // code here
+    List<Account> accounts = JSON.deserialize(inputJSON,Account);
+
+    return accounts;
+}
