@@ -3,10 +3,12 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     // code here
     List<sObject> combinedList = new List<sObject>();
 
+    if(accounts != null)
     for(Account acc : accounts){
         combinedList.add((sObject) acc);
     }
 
+    if(contacts != null)
     for(contact con : contacts){
         combinedList.add((sObject) con);
     }
