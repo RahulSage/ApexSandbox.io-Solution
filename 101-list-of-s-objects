@@ -1,0 +1,15 @@
+public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
+{
+    // code here
+    List<sObject> combinedList = new List<sObject>();
+
+    for(Account acc : accounts){
+        combinedList.add((sObject) acc);
+    }
+
+    for(contact con : contacts){
+        combinedList.add((sObject) con);
+    }
+
+    return combinedList;
+}
