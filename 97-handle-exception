@@ -4,7 +4,7 @@ public String divide(Integer a, Integer b){
         Integer c = a/b;
         return String.valueOf(c);
     } catch(exception ex){
-        if(a == null || b == null) return '';
+        if(a == null || b == null) return 'Attempt to de-reference a null object';
         return 'Divide by 0';
     } 
 }
