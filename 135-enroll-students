@@ -1,0 +1,17 @@
+public void enrollStudents(List<String> emails, String className) {
+    // code here
+    apxio__Class__c class = [SELECT ID FROM apxio__Class__c WHERE NAME =: className LIMIT 1];
+
+    List<apxio__Class_Enrollment__c> enrollmentList = new List<apxio__Class_Enrollment__c>();
+
+    for(apxio__Student__c student : [SELECT ID FROM apxio__Student__c WHERE apxio__Email__c IN: emails]){
+        apxio__Class_Enrollment__c enrol = new apxio__Class_Enrollment__c (
+            apxio__Student__c = student.Id,
+            apxio__Offered_Class__c = class.Id
+        );
+
+        enrollmentList.add(enrol);
+    }
+
+    insert enrollmentList;
+}
