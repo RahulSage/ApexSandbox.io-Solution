@@ -1,4 +1,10 @@
 public void insertAtStart(String cityName, List<String> cities) {
     //code here
-    cities.unshift(cityName);
+    Integer index = cities.size();
+    cities.add(cityName);
+    
+    while(index > 0){
+        cities[index] = cities[index-1];
+    }
+    cities[0] = cityName;
 }
