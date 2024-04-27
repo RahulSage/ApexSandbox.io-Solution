@@ -1,0 +1,13 @@
+public Boolean isKeyAccount(Account a) {
+    //code here
+    if(a.Industry == 'Banking'){
+        return a.Revenue >= 600000 ? true : false;
+    } else if(a.Industry == 'Technology'){
+        return a.Revenue >= 800000 ? true : false;
+    } else if(a.Industry == 'Retail'){
+        return a.Revenue >= 2000000 ? true : false;
+    } else if(a.Revenue > 500000){
+        return true;
+    } 
+    return false;
+}
