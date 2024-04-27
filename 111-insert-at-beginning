@@ -5,6 +5,7 @@ public void insertAtStart(String cityName, List<String> cities) {
     
     while(index > 0){
         cities[index] = cities[index-1];
+        index--;
     }
     cities[0] = cityName;
 }
