@@ -1,0 +1,12 @@
+public Decimal average(List<Decimal> numbers){
+    // your code here
+    Decimal sum = 0;
+    Decimal average = 0;
+
+    for(Decimal num : numbers){
+        sum+= num;
+    } 
+    average = (sum / numbers.size()).setScale(2);
+
+    return average;
+}
