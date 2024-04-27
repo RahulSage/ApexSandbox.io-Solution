@@ -1,0 +1,21 @@
+public Boolean companionPlants(List<String> plants) {
+    //code here
+
+    for(Integer i =0 ; i < plants.size() - 1 ; i++){
+        if(!areCompanionPlants(plants[i],plants[i+1]))  return false;  
+    }
+
+    return true;
+}
+
+public Boolean areCompanionPlants(String plant1, String plant2) {
+    //code here
+    Map<String,List<String>> companionsPair = new Map<String,List<String>>();
+    companionsPair.put('lettuce',new List<String>{'cucumbers','onions'});
+    companionsPair.put('onions',new List<String>{'carrots','tomatoes'});
+    
+
+    return (companionsPair.containsKey(plant1) && companionsPair.get(plant1).contains(plant2)) 
+    || (companionsPair.containsKey(plant2) && companionsPair.get(plant2).contains(plant1));
+
+}
