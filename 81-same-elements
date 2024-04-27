@@ -1,9 +1,10 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
     //code here
 
-    Set<Integer> num1Set = new Set<Integer>{nums1};
-    Set<Integer> num2Set = new Set<Integer>{nums2};
-
+    Set<Integer> num1Set = new Set<Integer>();
+    Set<Integer> num2Set = new Set<Integer>();
+    num1Set.addAll(nums1);
+    num2Set.addAll(nums2);
     for(Integer num : num1Set){
         if(!num2Set.contains(num)) return false;
     }
