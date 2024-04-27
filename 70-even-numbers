@@ -1,0 +1,10 @@
+public List<Integer> evenNumbers(Integer n) {
+    //code here
+    List<Integer> evenNums = new List<Integer>();
+    Integer number = 2;
+    while(evenNums.size()<n){
+        if(Math.mod(number,2) == 0) evenNums.add(number);
+        number++;
+    }
+    return evenNums;
+}
