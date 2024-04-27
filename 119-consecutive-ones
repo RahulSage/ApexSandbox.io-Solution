@@ -3,9 +3,10 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
     Integer slowIndex = 0;
     Integer fastIndex = 0;
     Integer max = 0;
+    Integer count = 0;
 
     while(fastIndex < numbers.size()){
-        Integer count = 0;
+        
         if(numbers[fastIndex] == 1){
             count++;
             fastIndex++;
@@ -18,6 +19,9 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
             slowIndex = fastIndex;
         }
     }
+    if(count > max) {
+                max = count;
+            }
 
     return max;
 }
