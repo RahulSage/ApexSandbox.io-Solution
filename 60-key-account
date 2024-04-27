@@ -6,7 +6,7 @@ public Boolean isKeyAccount(Account a) {
         return a.AnnualRevenue >= 800000 ? true : false;
     } else if(a.Industry == 'Retail'){
         return a.AnnualRevenue >= 2000000 ? true : false;
-    } else if(a.AnnualRevenue > 500000){
+    } else if(a.AnnualRevenue >= 500000){
         return true;
     } 
     return false;
