@@ -7,7 +7,7 @@ public Integer secondLargest(List<Integer> numbers) {
         if(num > max){
            secondMax = max;
            max = num; 
-        } else if(num > secondMax){
+        } else if(num > secondMax && num < max){
            secondMax = num; 
         }
     }
