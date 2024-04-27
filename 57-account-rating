@@ -7,5 +7,5 @@ public void setAccountRating(Account a) {
     } else {
         a.Rating = 'Cold';
     }
-    update a;
+    //update a;
 }
