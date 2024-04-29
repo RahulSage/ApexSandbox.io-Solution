@@ -49,6 +49,7 @@ public class LinkedList{
         size++;
     }
     public Integer removeFromTail(){
+        if(head == null){return null; }
         Node preceedingNode = null;
         Node currentNode = head;
         for(Integer i = 0;i < size - 1 ; i++){
