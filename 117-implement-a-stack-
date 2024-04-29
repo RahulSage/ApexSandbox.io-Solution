@@ -11,6 +11,7 @@ public class Stack {
     
     public Object pop() {
         //implement pop
+        if(sizeOfStack == 0) return null;
         Object obj = stackList.remove(sizeOfStack - 1);
         sizeOfStack--;
 
