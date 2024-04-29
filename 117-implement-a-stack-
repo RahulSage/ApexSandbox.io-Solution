@@ -1,0 +1,34 @@
+public class Stack {
+    
+    public List<Object> stackList = new List<Object>();
+    public Integer sizeOfStack = 0;
+    
+    public void push(Object obj) {
+        //implement push
+        stackList.add(obj);
+        sizeOfStack++;
+    }
+    
+    public Object pop() {
+        //implement pop
+        Object obj = stackList.remove();
+        sizeOfStack--;
+
+        return obj;
+    }
+    
+    public Integer size() {
+        //implement size
+        return sizeOfStack;
+    }
+    
+    public Object peek(){
+        //implement peek
+        return stackList[sizeOfStack - 1];
+    }
+    
+    public Boolean isEmpty() {
+        //implement isEmpty
+        return sizeOfStack == 0 ? true : false;
+    }
+}
