@@ -1,0 +1,28 @@
+public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
+    // solution 
+    List<Integer> resultArr = new List<Integer>();
+    Integer maxSize = list1.size() + list2.size();
+
+    Integer size = 0,i=0,j=0;
+
+    while(size <= maxSize){
+        if(i<list1.size() && j<list2.size()){
+            if(list1[i] <= list2[j]){
+               resultArr.add(list1[i]);
+               i++; 
+            } else{
+               resultArr.add(list2[j]);
+               j++;  
+            }
+        } else if(i<list1.size()){
+            resultArr.add(list1[i]);    
+            i++; 
+        } else if(j<list2.size()){
+            resultArr.add(list2[j]);
+            j++; 
+        }
+        size++;
+    }
+
+    return resultArr;
+}
