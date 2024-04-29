@@ -50,6 +50,13 @@ public class LinkedList{
     }
     public Integer removeFromTail(){
         if(head == null){return null; }
+        if(size == 1) {
+           Node currentNode = tail; 
+           head = null;
+           tail = null;
+           size--;
+           return currentNode.data; 
+        }
         Node preceedingNode = null;
         Node currentNode = head;
         for(Integer i = 0;i < size - 1 ; i++){
