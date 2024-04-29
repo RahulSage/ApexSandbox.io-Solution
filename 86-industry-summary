@@ -1,0 +1,15 @@
+public Map<String, Decimal> industrySummary(List<Account> accounts) {
+    //code here
+    Map<String,Decimal> industryVsRevenue = new Map<String,Decimal>();
+
+    for(Account acc : accounts){
+        if(industryVsRevenue.containsKey(acc.Industry)){
+            Decimal temp = industryVsRevenue.get(acc.Industry) + acc.AnnualRevenue;
+            industryVsRevenue.put(acc.Industry,temp);
+        } else {
+            industryVsRevenue.put(acc.Industry,acc.AnnualRevenue);
+        }
+    }
+
+    return industryVsRevenue;
+}
