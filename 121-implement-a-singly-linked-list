@@ -28,7 +28,7 @@ public class LinkedList{
         head = head.next;
         size--;
 
-        remove nodeToRemove.data;
+        return nodeToRemove.data;
     }
     public void addToTail(Integer value){
         Node newNode = new Node();
