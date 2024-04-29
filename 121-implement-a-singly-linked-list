@@ -1,9 +1,13 @@
 public class LinkedList{
 
+    public Node head;
+    public Node tail;
+    public Integer size;
+
     public LinkedList(){
-        Node head = null;
-        Node tail = null;
-        Integer size = 0;
+         head = null;
+         tail = null;
+         size = 0;
     }
 
     public void addToFront(Integer value){
