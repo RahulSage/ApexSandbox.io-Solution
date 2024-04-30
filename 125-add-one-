@@ -3,7 +3,7 @@ public void plusOne(List<Integer> numbers) {
     List<Integer> clonedWith1 = new List<Integer>{1};
     Integer carry = 0;
 
-    for(Integer numbers.size() -1 ; i>=0; i--){
+    for(Integer i = numbers.size() - 1 ; i>=0; i--){
         
         if(numbers[i] == 9){
             carry = 1;
