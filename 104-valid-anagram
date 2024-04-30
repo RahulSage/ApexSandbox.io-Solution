@@ -21,4 +21,5 @@ public boolean isAnagram(String s1, String s2) {
             charVsFrequency.put(s2.charAt(i),temp);
         }
     }
+    return true;
 }
