@@ -1,7 +1,7 @@
 public boolean isAnagram(String s1, String s2) {
     //Code here
     if(s1.length() != s2.length()) return false;
-    map<Integer,Integer> charVsFrequency = new map<String,Integer>();
+    map<Integer,Integer> charVsFrequency = new map<Integer,Integer>();
 
     for(Integer i=0; i<s1.length();i++){
         if(charVsFrequency.containsKey(s1.charAt(i))){
