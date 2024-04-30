@@ -17,6 +17,7 @@ public void plusOne(List<Integer> numbers) {
 
     if(carry == 1) {
         clonedWith1.addAll(numbers);
-        numbers = clonedWith1;
+        numbers.clear();
+        numbers.addAll(clonedWith1);
     }
 }
