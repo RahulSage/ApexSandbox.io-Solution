@@ -2,7 +2,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     // solution here
     Integer lower = 0;
     Integer high = opportunities.size();
-    Integer mid = Math.floor((high + lower) / 2);
+    Integer mid = (high + lower) / 2;
 
     while(high > lower){
         if(opportunities[mid].amount == target) {
@@ -12,7 +12,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         } else if(opportunities[mid].amount > target){
             high = mid - 1;
         }
-        mid = Math.floor((high + lower) / 2);
+        mid = (high + lower) / 2;
     }
 
     return -1;
